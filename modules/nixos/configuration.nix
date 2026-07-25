@@ -17,6 +17,7 @@
 
   services = {
     displayManager.sddm = {
+      enable = true;
       wayland.enable = true;
     };
   };
@@ -34,8 +35,17 @@
     packages = with pkgs; [
       neovim
       tree
+      ghostty
     ];
   };
+
+  nixpkgs.overlays = [
+    (final: prev: {
+      dwl = prev.dwl.override {
+	configH = ../dwl/config.def.h;
+      };
+    })
+  ];
 
   programs = {
     firefox.enable = true;
@@ -46,8 +56,6 @@
     git
     curl
     wget
-    ghostty
-    dmenu
   ];
 
   # This option defines the first version of NixOS you have installed on this particular machine,
