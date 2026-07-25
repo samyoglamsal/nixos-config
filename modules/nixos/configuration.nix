@@ -36,6 +36,7 @@
       neovim
       tree
       ghostty
+      wmenu
     ];
   };
 
