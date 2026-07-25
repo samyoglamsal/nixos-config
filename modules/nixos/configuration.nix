@@ -57,6 +57,7 @@
     git
     curl
     wget
+    wlr-randr
   ];
 
   # This option defines the first version of NixOS you have installed on this particular machine,
