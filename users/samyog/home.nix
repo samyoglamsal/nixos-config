@@ -1,4 +1,8 @@
-{ lib, pkgs, ... }: {
+{ lib, pkgs, ... }: 
+let
+  mod = "Mod4";
+in
+{
 
   xdg = {
     enable = true;
@@ -18,24 +22,10 @@
     ];
   };
 
-  services.kanshi = {
+  wayland.windowManager.sway = {
     enable = true;
-
-    profiles = {
-      nixos = {
-	outputs = [
-	  {
-	    criteria = "DP-2";
-	    mode = "2560x1440@165Hz";
-	    position = "1920,0";
-	  }
-	  {
-	    criteria = "DP-1";
-	    mode = "1920x1080@165Hz";
-	    position = "0,0";
-	  }
-	];
-      };
+    config = {
+      modifier = mod;
     };
   };
 }
