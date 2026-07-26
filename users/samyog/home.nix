@@ -16,6 +16,7 @@ in
     stateVersion = "26.05";
 
     packages = with pkgs; [
+      neovim
       claude-code 
       ripgrep
       fd

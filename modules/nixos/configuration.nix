@@ -10,6 +10,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  security.polkit.enable = true;
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
   time.timeZone = "America/New_York";
@@ -33,31 +34,19 @@
     shell = pkgs.bash;
     home = "/home/samyog";
     packages = with pkgs; [
-      neovim
       tree
       ghostty
-      wmenu
     ];
   };
 
-  nixpkgs.overlays = [
-    (final: prev: {
-      dwl = prev.dwl.override {
-	configH = ../dwl/config.def.h;
-      };
-    })
-  ];
-
   programs = {
     firefox.enable = true;
-    dwl.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
     git
     curl
     wget
-    wlr-randr
   ];
 
   # This option defines the first version of NixOS you have installed on this particular machine,
