@@ -1,12 +1,16 @@
-{ lib, pkgs, ... }: 
+{ config, lib, pkgs, inputs, ... }: 
 let
-  mod = "Mod4";
+  dotfiles = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/.config";
 in
 {
 
   xdg = {
     enable = true;
     configFile = {
+      nvim.source = "${dotfiles}/nvim";
+      sway.source = "${dotfiles}/sway";
+      tmux.source = "${dotfiles}/tmux";
+      ghostty.source = "${dotfiles}/ghostty";
     };
   };
 
@@ -16,17 +20,10 @@ in
     stateVersion = "26.05";
 
     packages = with pkgs; [
-      neovim
       claude-code 
       ripgrep
       fd
+      wmenu
     ];
-  };
-
-  wayland.windowManager.sway = {
-    enable = true;
-    config = {
-      modifier = mod;
-    };
   };
 }
