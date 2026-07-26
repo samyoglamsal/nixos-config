@@ -24,6 +24,8 @@ in
       ripgrep
       fd
       wmenu
+      clang-tools
+      gcc
     ];
   };
 }
