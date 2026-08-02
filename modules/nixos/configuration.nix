@@ -31,7 +31,7 @@
   users.users.samyog = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    shell = pkgs.bash;
+    shell = pkgs.zsh;
     home = "/home/samyog";
     packages = with pkgs; [
       tree
@@ -43,6 +43,7 @@
     firefox.enable = true;
     sway.enable = true;
     tmux.enable = true;
+    zsh.enable = true;
     neovim = {
       enable = true;
 	  defaultEditor = true;

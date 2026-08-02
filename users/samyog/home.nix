@@ -26,6 +26,7 @@ in
       wmenu
       clang-tools
       gcc
+      swaybg
     ];
   };
 }
