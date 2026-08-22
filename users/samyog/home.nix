@@ -1,6 +1,6 @@
 { config, lib, pkgs, inputs, ... }: 
 let
-  dotfiles = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/.config";
+  dotfiles = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/dotfiles";
 in
 {
 
@@ -11,6 +11,7 @@ in
       sway.source = "${dotfiles}/sway";
       tmux.source = "${dotfiles}/tmux";
       ghostty.source = "${dotfiles}/ghostty";
+      xoszsh.source = "${dotfiles}/zsh";
     };
   };
 
@@ -27,6 +28,9 @@ in
       clang-tools
       gcc
       swaybg
+      ghostty
+      fzf
+      nerd-fonts.caskaydia-mono
     ];
   };
 }

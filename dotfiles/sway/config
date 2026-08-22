@@ -1,0 +1,36 @@
+# Sets the modifier key to Super
+# In general I'll try to use Super for most WM-related keybinds
+set $super Mod4
+set $alt Mod1
+
+# Some defaults
+set $term ghostty
+set $menu wmenu-run
+set $browser firefox
+
+# Output configuration
+output DP-1 resolution 1920x1080@165Hz position 0,0
+output DP-2 resolution 2560x1440@165Hz position 1920,0
+output * bg ~/.background-image fill
+
+# Eyecandy
+gaps inner 20
+
+# Keybinds
+bindsym $super+Return exec $term
+bindsym $super+p exec $menu
+bindsym $super+r reload
+bindsym $super+b exec $browser
+
+# Keyboard
+input "type:keyboard" {
+  repeat_delay 175
+  repeat_rate 40
+  
+  xkb_options caps:escape
+}
+
+# Bar
+bar {
+  position top
+}

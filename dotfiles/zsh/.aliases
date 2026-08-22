@@ -1,0 +1,8 @@
+# vim: ft=sh
+alias reload=". $XDG_CONFIG_HOME/zsh/.zshrc && . $XDG_CONFIG_HOME/zsh/.zshenv && echo Reloaded"
+
+alias ls="ls --color=auto"
+alias vim="nvim"
+alias editnvim="nvim $XDG_CONFIG_HOME/nvim"
+alias editzsh="nvim $XDG_CONFIG_HOME/zsh"
+alias open="xdg-open"

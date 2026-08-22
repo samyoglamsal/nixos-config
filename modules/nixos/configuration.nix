@@ -31,12 +31,8 @@
   users.users.samyog = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    shell = pkgs.zsh;
     home = "/home/samyog";
-    packages = with pkgs; [
-      tree
-      ghostty
-    ];
+    shell = pkgs.zsh;
   };
 
   programs = {
