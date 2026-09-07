@@ -5,5 +5,3 @@ require("config.lazy")
 require("config.opts")
 require("config.keys")
 require("config.diagnostics")
-
-vim.cmd.colorscheme("gruvbox")

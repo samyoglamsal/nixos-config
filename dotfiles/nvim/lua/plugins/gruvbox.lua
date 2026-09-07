@@ -3,10 +3,11 @@ return {
   priority = 1000,
   config = true,
   opts = {
-    palette_overrides = {
-      dark0_hard = "#000000",
-    },
+    terminal_colors = true,
     contrast = "hard",
+    strikethrough = false,
+    undercurl = false,
+    bold = false,
     italic = {
       strings = false,
       emphasis = false,
