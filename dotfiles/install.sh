@@ -23,9 +23,9 @@ for dir in */; do
     fi
 done
 
-if [[ ! -f $HOME/.local/bin ]]; then
-    echo "Copying update checking script..."
-    cp ./check_dotfiles_update.sh $HOME/.local/bin/
+if [[ ! -e "$HOME/.local/bin/check_dotfiles_update.sh" ]]; then
+    echo "Creating soft link for update checking script..."
+    ln -s "${script_dir}/check_dotfiles_update.sh" "$HOME/.local/bin/check_dotfiles_update.sh"
 fi
 
 echo "Done"
