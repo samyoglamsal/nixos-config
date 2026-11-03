@@ -22,6 +22,6 @@ QtObject {
     readonly property string font: "CaskaydiaCove Nerd Font"
     readonly property int textSize: 16
     readonly property int iconSize: 22
-    readonly property int radius: 4
+    readonly property int radius: 0
     readonly property int pillHeight: 26
 }
