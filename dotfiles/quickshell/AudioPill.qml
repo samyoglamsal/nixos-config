@@ -26,7 +26,7 @@ Item {
 
     function setVolume(v) {
         if (root.sink && root.sink.audio)
-            root.sink.audio.volume = Math.max(0, Math.min(1.5, v));
+            root.sink.audio.volume = Math.max(0, Math.min(1, v));
     }
 
     Pill {
