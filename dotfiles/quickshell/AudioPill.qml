@@ -62,8 +62,17 @@ Item {
         implicitHeight: 110
 
         anchor.window: root.bar
-        anchor.rect.x: root.mapToItem(null, 0, 0).x
+        anchor.rect.x: popupX()
         anchor.rect.y: root.bar.implicitHeight + 4
+
+        // Center the dropdown under the pill, clamped to the bar's width.
+        function popupX() {
+            // Read the layout properties so the binding re-runs when the pill moves.
+            const deps = [root.x, root.width, root.parent ? root.parent.x : 0];
+            const pillX = root.mapToItem(null, root.width / 2, 0).x;
+            const x = pillX - popup.implicitWidth / 2;
+            return Math.max(0, Math.min(x, root.bar.width - popup.implicitWidth));
+        }
 
         Rectangle {
             anchors.fill: parent
