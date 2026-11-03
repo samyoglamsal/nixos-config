@@ -26,7 +26,7 @@ RowLayout {
             implicitWidth: label.implicitWidth + 16
             implicitHeight: theme.pillHeight
             radius: theme.radius
-            color: hws.focused ? theme.yellow : (hws.active ? theme.bg2 : "transparent")
+            color: hws.focused ? theme.darkBlue : (hws.active ? theme.bg2 : "transparent")
             border.width: hws.urgent ? 1 : 0
             border.color: theme.red
 
@@ -37,7 +37,7 @@ RowLayout {
                 font.family: theme.font
                 font.pixelSize: theme.textSize
                 font.bold: true
-                color: ws.hws.focused ? theme.dark : (ws.hws.active ? theme.fg : theme.fgDim)
+                color: ws.hws.focused ? theme.fg : (ws.hws.active ? theme.fg : theme.fgDim)
             }
 
             MouseArea {
