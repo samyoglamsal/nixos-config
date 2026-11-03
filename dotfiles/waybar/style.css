@@ -26,7 +26,7 @@ window#waybar {
 	padding: 0 2px;
 	margin: 0px;
 	background: transparent;
-	color: #fe8019;
+	color: #a89984;
 	/*
 	color: #83a598;
 	color: #ffffff;
@@ -42,18 +42,18 @@ window#waybar {
 }
 
 #workspaces button.focused {
-	background: #83a598;
-	color: #1b1d1e;
+	background: #fabd2f;
+	color: #1d2021;
 }
 
 #workspaces button.urgent {
-	background: #d3869b;
-	color: #1b1d1e;
+	background: #fb4934;
+	color: #1d2021;
 }
 
 #workspaces button.active {
-    background: #cc241d;
-    color: #fabd2f;
+    background: #504945;
+    color: #ebdbb2;
 }   
 
 #mode {
