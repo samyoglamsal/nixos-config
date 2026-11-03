@@ -26,11 +26,11 @@ window#waybar {
 	padding: 0 2px;
 	margin: 0px;
 	background: transparent;
-	color: #ff8700;
+	color: #a89984;
 	/*
-	color: #00afd7;
+	color: #83a598;
 	color: #ffffff;
-	border: 1px solid #00afd7;
+	border: 1px solid #83a598;
 	*/
 	border: 1px solid #1b1d1e;
 	font-weight: bold;
@@ -42,27 +42,27 @@ window#waybar {
 }
 
 #workspaces button.focused {
-	background: #00afd7;
-	color: #1b1d1e;
+	background: #fabd2f;
+	color: #1d2021;
 }
 
 #workspaces button.urgent {
-	background: #af005f;
-	color: #1b1d1e;
+	background: #fb4934;
+	color: #1d2021;
 }
 
 #workspaces button.active {
-    background: #cc241d;
-    color: #fabd2f;
+    background: #504945;
+    color: #ebdbb2;
 }   
 
 #mode {
-	background: #af005f;
+	background: #d3869b;
 	color: #1b1d1e;
 }
 
-#mpd, #custom-disk, #battery, #cpu, #memory, #network, #temperature, #tray, #wireplumber, #mode {
-    color: #1d2021;;
+#mpd, #custom-disk, #custom-disk-write, #cpu, #memory, #network, #temperature, #tray, #wireplumber, #mode {
+    color: #1d2021;
     border-radius: 4px;
     margin: 0 5px 0 5px;
     padding: 0 10px 0 10px;
@@ -72,8 +72,16 @@ window#waybar {
     background-color: #b8bb26;
 }
 
-#temperature {
+#custom-disk-write {
+    background-color: #689d6a;
+}
+
+#custom-disk-write.critical {
     background-color: #fb4934;
+}
+
+#temperature {
+    background-color: #fe8019;
 }
 
 #cpu {
@@ -93,29 +101,29 @@ window#waybar {
 }
 
 #mpd {
-    background-color: #fe8019;
+    background-color: #458588;
 }
 
 @keyframes blink {
     to {
-        background-color: #af005f;
+        background-color: #d3869b;
     }
 }
 
 #clock {
-    padding: 0 0 0 5;
+    padding: 0 13px 0 7px;
     background-color: #3c3836;
 }
 #clock.left {
-    border-radius: 10 0 0 10;
+    border-radius: 10px 0 0 10px;
 }
 #clock.right {
-    border-radius: 0 10 10 0;
+    border-radius: 0 10px 10px 0;
 }
 
 #clock.right,
 #clock.left {
-    padding: 0 10 0 10;
+    padding: 0 10px 0 10px;
 }
 
 
@@ -133,5 +141,5 @@ window#waybar {
 }
 
 #idle_inhibitor {
-    margin: 0 10 0 5;
+    margin: 0 10px 0 5px;
 }
